@@ -9,19 +9,19 @@ export const bookingContent = {
     heroTitle: {
       ar: "احجز إقامتك",
       en: "Book Your Stay",
-      ku: "شوێنی خۆت رزرو بکە",
+      ku: "مانەوەکەت حجز بکە",
     },
 
     heroText: {
       ar: "املأ النموذج أدناه وسيتواصل معك فريقنا لتأكيد الحجز.",
       en: "Fill the form below and our team will contact you to confirm your booking.",
-      ku: "فۆرمەکە پڕ بکە و تیمەکەمان پەیوەندیت پێوە دەکات.",
+      ku: "فۆرمەکە پڕ بکەوە و تیمەکەمان پەیوەندیت پێوە دەکات.",
     },
 
     formTitle: {
       ar: "تفاصيل الحجز",
       en: "Booking Details",
-      ku: "وردەکاری رزرو",
+      ku: "وردەکاری حجز",
     },
 
     fields: {
@@ -65,7 +65,7 @@ export const bookingContent = {
     submit: {
       ar: "إرسال الحجز",
       en: "Send Booking",
-      ku: "ناردنی رزرو",
+      ku: "ناردنی حجز",
     },
   },
 };
