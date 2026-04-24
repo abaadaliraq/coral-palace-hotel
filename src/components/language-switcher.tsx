@@ -2,7 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Locale, locales } from "@/lib/i18n";
+
+type Locale = "ar" | "en" | "ku";
+
+const locales: Locale[] = ["ar", "en", "ku"];
 
 export default function LanguageSwitcher({
   currentLocale,
@@ -13,8 +16,13 @@ export default function LanguageSwitcher({
 
   const getLocalizedPath = (locale: Locale) => {
     const segments = pathname.split("/").filter(Boolean);
+
+    // إذا ماكو مسار
     if (segments.length === 0) return `/${locale}`;
+
+    // استبدال اللغة فقط
     segments[0] = locale;
+
     return `/${segments.join("/")}`;
   };
 
@@ -22,6 +30,7 @@ export default function LanguageSwitcher({
     <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur">
       {locales.map((locale) => {
         const active = currentLocale === locale;
+
         return (
           <Link
             key={locale}
