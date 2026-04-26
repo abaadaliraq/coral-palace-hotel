@@ -8,9 +8,9 @@ type Props = {
 };
 
 const imageMap = {
-  ar: "/signature.jpg",
-  en: "/signature.jpg",
-  ku: "/signature.jpg",
+  ar: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/signature-section_ddw8ca",
+  en: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/signature-section_ddw8ca",
+  ku: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/signature-section_ddw8ca",
 } as const;
 
 export default function SignatureSection({ locale }: Props) {

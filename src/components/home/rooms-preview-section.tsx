@@ -19,7 +19,11 @@ export default function RoomsPreviewSection({ locale }: Props) {
   const cards = t.items;
 
   // 🔥 هنا الصور الثابتة
-  const images = ["/room1.jpg", "/room2.jpg", "/room3.jpg"];
+  const images = [
+  "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1000/v1/room2-1.jpj_c1zwmh",
+  "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1000/v1/room_2_mnuwkp",
+  "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1000/v1/room2-3_haow39",
+];
 
   return (
     <section dir={dir} className="bg-[#f6f2eb] py-20 md:py-24">

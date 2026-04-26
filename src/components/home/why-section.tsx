@@ -7,10 +7,10 @@ type Props = {
   locale: string;
 };
 
-const imageMap = {
-  ar: "/why-coral.jpg",
-  en: "/why-coral.jpg",
-  ku: "/why-coral.jpg",
+const imageMap = { 
+  ar: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/why-us_bzj9n7",
+  en: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/why-us_bzj9n7",
+  ku: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/why-us_bzj9n7",
 } as const;
 
 export default function WhySection({ locale }: Props) {
@@ -22,7 +22,6 @@ export default function WhySection({ locale }: Props) {
 
   return (
     <section dir={dir} className="relative w-full overflow-hidden">
-      {/* Full width image */}
       <div className="relative h-[60vh] md:h-[70vh] lg:h-[80vh]">
         <img
           src={imageMap[currentLocale]}

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Cairo, Noto_Naskh_Arabic } from "next/font/google";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
+import ScrollToTop from "@/components/ui/scroll-to-top";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
@@ -37,6 +38,9 @@ export default async function LocaleLayout({
       </div>
 
       <SiteFooter locale={locale} />
+
+      {/* 🔥 هذا هو المهم */}
+      <ScrollToTop />
     </div>
   );
 }

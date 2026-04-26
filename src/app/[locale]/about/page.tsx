@@ -27,13 +27,14 @@ export default async function Page({ params }: Props) {
 
       {/* 🔥 HERO */}
       <section className="relative h-[60vh] min-h-[420px] w-full overflow-hidden rounded-b-[60px]">
-        <Image
-          src="/hero1.jpg"
-          alt="About"
-          fill
-          priority
-          className="object-cover"
-        />
+      
+         <Image
+  src="https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1600/v1/about-hero_ik0dbm"
+  alt="About hero"
+  fill
+  className="object-cover"
+/>
+      
 
         <div className="absolute inset-0 bg-black/50" />
 
@@ -58,12 +59,13 @@ export default async function Page({ params }: Props) {
 
           {/* 🖼 IMAGE */}
           <div className="relative h-[400px] overflow-hidden rounded-[36px]">
-            <Image
-              src="/signature.jpg"
-              alt="Room"
-              fill
-              className="object-cover"
-            />
+           <Image
+  src="https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/about-1_prytvk"
+  alt="About image"
+  width={800}
+  height={600}
+  className="object-cover rounded-2xl"
+/>
           </div>
 
           {/* 📝 TEXT */}

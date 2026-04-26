@@ -25,9 +25,9 @@ export default function RoomGallery({ images, alt }: Props) {
       </div>
 
       <div className="grid grid-cols-4 gap-3">
-        {safeImages.map((image) => (
-          <button
-            key={image}
+       {safeImages.map((image, index) => (
+  <button
+    key={`${image}-${index}`}
             type="button"
             onClick={() => setActiveImage(image)}
             className={`relative h-20 overflow-hidden rounded-[20px] border transition md:h-28 ${

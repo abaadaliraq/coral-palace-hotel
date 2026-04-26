@@ -1,80 +1,81 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+
+type Props = {
+  locale: string;
+};
 
 type Locale = "ar" | "en" | "ku";
 
 const content = {
-  ar: {
-    dir: "rtl",
-    eyebrow: "Coral Palace Hotel",
-    title: "لحظة هادئة قبل الوصول",
-    text: "مساحات راقية، تفاصيل متوازنة، وتجربة إقامة مصممة لتُشعر الضيف بالهدوء منذ اللحظة الأولى.",
-    button: "استكشف الغرف",
-  },
   en: {
     dir: "ltr",
     eyebrow: "Coral Palace Hotel",
-    title: "A quiet moment before arrival",
-    text: "Refined spaces, balanced details, and a hospitality experience designed to feel calm from the very first moment.",
-    button: "Explore Rooms",
+    title: "Plan your next stay with comfort and elegance.",
+    cta: "Book Now",
+  },
+  ar: {
+    dir: "rtl",
+    eyebrow: "فندق كورال بالاس",
+    title: "خطط لإقامتك القادمة براحة وأناقة.",
+    cta: "احجز الآن",
   },
   ku: {
     dir: "rtl",
     eyebrow: "Coral Palace Hotel",
-    title: "ساتێکی ئارام پێش گەیشتن",
-    text: "بۆشاییەکی جوان، وردەکاریی هاوسەنگ، و ئەزموونێکی میوانداری دروستکراو بۆ ئارامی لە یەکەم ساتەوە.",
-    button: "دەست بە حجز بکە",
+    title: "مانەوەی داهاتووت بە ئاسوودەیی و جوانی پلان بکە.",
+    cta: "حجز بکە",
   },
 } as const;
 
-export default function PreFooterBanner({ locale }: { locale: string }) {
-  const currentLocale = (locale in content ? locale : "en") as Locale;
+const bannerImage =
+  "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1600/v1/footer-banner_q4ktjk";
+
+export default function PreFooterBanner({ locale }: Props) {
+  const currentLocale: Locale =
+    locale === "ar" || locale === "ku" || locale === "en" ? locale : "en";
+
   const t = content[currentLocale];
-  const isRtl = t.dir === "rtl";
 
   return (
-    <section dir={t.dir} className="relative mt-16 md:mt-24">
-      <div className="relative h-[240px] overflow-hidden md:h-[312px]">
+    <section dir={t.dir} className="relative w-full overflow-hidden">
+      
+      {/* IMAGE */}
+      <div className="relative h-[240px] md:h-[300px] w-full">
         <img
-          src="footer-banner.jpg"
-          alt="Coral Palace Hotel Banner"
+          src={bannerImage}
+          alt="Coral Palace Banner"
           className="h-full w-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-        <div className="absolute inset-0 flex items-center">
-          <div className="mx-auto w-[min(1280px,calc(100%-24px))]">
-            <motion.div
-              initial={{ opacity: 0, y: 22 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 0.6 }}
-              className={`max-w-[720px] ${isRtl ? "text-right" : "text-left"}`}
-            >
-              <span className="mb-3 inline-flex rounded-full border border-white/14 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#e1bc88] backdrop-blur md:text-xs">
-                {t.eyebrow}
-              </span>
+        {/* CONTENT */}
+        <div className="absolute inset-0 flex items-end">
+          <div className="mx-auto w-[min(1200px,calc(100%-24px))] pb-10 md:pb-14">
+            
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#c79a5c] md:text-xs">
+              {t.eyebrow}
+            </p>
 
-              <h2 className="text-2xl font-bold leading-[1.2] text-white md:text-4xl">
+            <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+              <h2 className="max-w-2xl text-3xl font-semibold leading-[1.2] text-white md:text-5xl">
                 {t.title}
               </h2>
 
-              <p className="mt-4 max-w-[620px] text-sm leading-7 text-white/82 md:text-base">
-                {t.text}
-              </p>
-
               <Link
                 href={`/${currentLocale}/booking`}
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#c79a5c] px-6 py-3 text-sm font-semibold text-black transition hover:bg-[#d7ab6f]"
+                className="inline-flex items-center gap-2 rounded-full bg-[#c79a5c] px-6 py-3 text-sm font-semibold text-black transition hover:bg-[#d8af75]"
               >
-                {t.button}
-                <ArrowRight className={`h-4 w-4 ${isRtl ? "rotate-180" : ""}`} />
+                {t.cta}
+                <ArrowUpRight size={16} />
               </Link>
-            </motion.div>
+            </div>
+
           </div>
         </div>
       </div>

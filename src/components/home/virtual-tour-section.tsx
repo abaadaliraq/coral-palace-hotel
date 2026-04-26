@@ -65,11 +65,11 @@ export default function VirtualTourSection({ locale }: Props) {
       <div ref={sectionRef} className="relative h-[230vh] md:h-[260vh]">
         <div className="sticky top-0 h-screen overflow-hidden">
           <div className="absolute inset-0">
-            <img
-              src="/test1.jpg"
-              alt="Virtual Tour Preview"
-              className="h-full w-full object-cover object-center"
-            />
+           <img
+  src="https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1600/v1/virtualtour-hom_ne9vcl"
+  alt="Virtual Tour"
+  className="w-full h-full object-cover"
+/>
             <div className="absolute inset-0 bg-black/35" />
           </div>
 

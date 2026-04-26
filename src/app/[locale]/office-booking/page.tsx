@@ -28,13 +28,13 @@ export default async function OfficeBookingPage({ params }: Props) {
   return (
     <main dir={dir} className="min-h-screen bg-[#f6f1e8] text-[#18130c]">
       <section className="relative h-[62vh] min-h-[460px] w-full overflow-hidden rounded-b-[60px]">
-        <Image
-          src={t.heroImage}
-          alt=""
-          fill
-          priority
-          className="object-cover"
-        />
+       <Image
+  src="https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1600/v1/offices-hero_suxjfc"
+  alt="Offices"
+  fill
+  priority
+  className="object-cover"
+/>
 
         <div className="absolute inset-0 bg-black/50" />
 
@@ -64,13 +64,13 @@ export default async function OfficeBookingPage({ params }: Props) {
           </div>
 
           <div className="relative h-[320px] overflow-hidden rounded-[28px] shadow-[0_14px_45px_rgba(90,64,28,0.12)] md:h-[420px] md:rounded-[36px]">
-            <Image
-              src="/office-1.jpg"
-              alt=""
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
+           <Image
+  src="https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/office-1_akmvpy"
+  alt="Office space"
+  width={800}
+  height={600}
+  className="object-cover rounded-2xl"
+/>
           </div>
         </div>
 

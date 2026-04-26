@@ -3,7 +3,6 @@ import {
   Dumbbell,
   HeartPulse,
   Waves,
-  Utensils,
   Baby,
   Building2,
   Trees,
@@ -35,21 +34,71 @@ export default async function DiningFacilitiesPage({ params }: Props) {
     <Trees key="garden" size={16} />,
     <Coffee key="breakfast" size={16} />,
   ];
+const gallery = [
+  {
+    image:
+      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities1_eyyhtc",
+   
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities2_w530ip",
+   
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities7_hi46jm",
+    
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities3_ybvq9f",
+   
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities9_d6rywf",
+   
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities8_u1ru5x",
+      
+  
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities4_fnvdm7",
+    
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilitie6_x8fmwb",
+   
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities10_xl0xgs",
+    
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities5_rjhvdr",
+    
+  },
+];
 
-  const gallery = [
-    { image: "/pool.jpg", title: currentLocale === "ar" ? "المسبح" : currentLocale === "ku" ? "مەسبەح" : "Pool" },
-    { image: "/villag.jpg", title: currentLocale === "ar" ? "القرية" : currentLocale === "ku" ? "گوند" : "Village" },
-    { image: "/garden.jpg", title: currentLocale === "ar" ? "الحدائق" : currentLocale === "ku" ? "باخچەکان" : "Gardens" },
-  ];
+  const infiniteGallery = [...gallery, ...gallery];
 
   return (
     <main dir={dir} className="min-h-screen bg-[#f6f1e8] text-[#18130c]">
       <section className="relative h-[66vh] min-h-[500px] w-full overflow-hidden rounded-b-[64px]">
         <Image
-          src={t.heroImage}
+         src="https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1800/v1/facilities4_fnvdm7"
           alt=""
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
 
@@ -101,7 +150,7 @@ export default async function DiningFacilitiesPage({ params }: Props) {
 
             <div className="relative min-h-[260px] overflow-hidden rounded-[26px] md:min-h-[340px]">
               <Image
-                src={t.featured[0].image}
+               src="https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/facilities-rest_ojvsfe"
                 alt=""
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -111,38 +160,45 @@ export default async function DiningFacilitiesPage({ params }: Props) {
           </div>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {t.featured.slice(1).map((item, index) => (
-            <article
-              key={index}
-              className="overflow-hidden rounded-[28px] bg-white shadow-[0_12px_45px_rgba(90,64,28,0.08)]"
-            >
-              <div className="relative h-[240px]">
-                <Image
-                  src={item.image}
-                  alt=""
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
+       <div className="mt-14 grid gap-6 md:grid-cols-2">
+  {t.featured.slice(1).map((item, index) => (
+    <article
+      key={index}
+      className="overflow-hidden rounded-[28px] bg-white shadow-[0_12px_45px_rgba(90,64,28,0.08)]"
+    >
+      <div className="relative h-[240px]">
+        <Image
+          src={
+            index === 0
+              ? "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/facilities-spa_wqjgqx"
+              : "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/facilities-gym_hryzkp"
+          }
+          alt="Facility"
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover"
+        />
+      </div>
 
-              <div className="p-5 md:p-7">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#efe4d2] text-[#b98a4d]">
-                  {index === 0 ? <HeartPulse size={16} /> : <Dumbbell size={16} />}
-                </div>
-
-                <h3 className="text-xl font-medium md:text-2xl">
-                  {item.title[currentLocale]}
-                </h3>
-
-                <p className="mt-3 text-sm leading-7 text-black/60">
-                  {item.text[currentLocale]}
-                </p>
-              </div>
-            </article>
-          ))}
+      <div className="p-5 md:p-7">
+        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#efe4d2] text-[#b98a4d]">
+          {index === 0 ? (
+            <HeartPulse size={16} />
+          ) : (
+            <Dumbbell size={16} />
+          )}
         </div>
+<h3 className="text-lg font-semibold">
+  {item.title[currentLocale]}
+</h3>
+
+<p className="mt-2 text-sm leading-7 text-neutral-500">
+  {item.text[currentLocale]}
+</p>
+      </div>
+    </article>
+  ))}
+</div>
 
         <div className="mt-20 md:mt-24">
           <h2 className="text-3xl font-light md:text-5xl">
@@ -170,34 +226,58 @@ export default async function DiningFacilitiesPage({ params }: Props) {
             ))}
           </div>
         </div>
-
-        <div className="mt-24">
-          <h2 className="text-3xl font-light md:text-5xl">
-            {currentLocale === "ar"
-              ? "لقطات من مرافق الفندق"
-              : currentLocale === "ku"
-              ? "وێنەیەک لە خزمەتگوزارییەکان"
-              : "A Glimpse of Our Facilities"}
-          </h2>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-  {gallery.map((item) => (
-    <div
-      key={item.image}
-      className="relative h-[260px] md:h-[320px] overflow-hidden rounded-[18px]"
-    >
-      <Image
-        src={item.image}
-        alt=""
-        fill
-        sizes="(max-width: 768px) 100vw, 33vw"
-        className="object-cover transition duration-700 hover:scale-105"
-      />
-    </div>
-  ))}
-</div>
-        </div>
       </section>
+
+   <section className="overflow-hidden pb-24">
+  <div className="mx-auto max-w-7xl px-5 md:px-10">
+    <h2 className="text-3xl font-light md:text-5xl">
+      {currentLocale === "ar"
+        ? "لقطات من مرافق الفندق"
+        : currentLocale === "ku"
+        ? "وێنەیەک لە خزمەتگوزارییەکان"
+        : "A Glimpse of Our Facilities"}
+    </h2>
+  </div>
+
+  <div className="relative left-1/2 mt-10 w-screen -translate-x-1/2 overflow-hidden">
+    <div className="facility-carousel flex w-max gap-5">
+      {infiniteGallery.map((item, index) => (
+        <div
+          key={index}
+          className="relative h-[250px] w-[72vw] shrink-0 overflow-hidden rounded-[28px] bg-black shadow-[0_18px_55px_rgba(90,64,28,0.16)] sm:w-[42vw] md:h-[300px] lg:w-[18vw] xl:h-[340px]"
+        >
+          <Image
+            src={item.image}
+            alt="Hotel facility"
+            fill
+            sizes="(max-width: 640px) 72vw, (max-width: 1024px) 42vw, 18vw"
+            className="object-cover"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <style>{`
+    @keyframes facilityScroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .facility-carousel {
+      animation: facilityScroll 42s linear infinite;
+      will-change: transform;
+    }
+
+    .facility-carousel:hover {
+      animation-play-state: paused;
+    }
+  `}</style>
+</section>
     </main>
   );
 }

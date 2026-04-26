@@ -31,13 +31,13 @@ export default async function ToursPage({ params }: Props) {
     <main dir={dir} className="min-h-screen bg-[#f6f1e8] text-[#18130c]">
       <section className="relative h-[60vh] min-h-[420px] w-full overflow-hidden rounded-b-[60px]">
 
-  <Image
-    src="/tours.jpg"
-    alt="Virtual Tours"
-    fill
-    priority
-    className="object-cover"
-  />
+ <Image
+  src="https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1600/v1/virtualtoure-hero_mhpykx"
+  alt="Virtual Tour"
+  fill
+  priority
+  className="object-cover"
+/>
 
   <div className="absolute inset-0 bg-black/50" />
 

@@ -15,9 +15,8 @@ type Props = {
 export default async function RoomDetailsPage({ params }: Props) {
   const { locale, slug } = await params;
 
-  const currentLocale: Locale = ["ar", "en", "ku"].includes(locale)
-    ? locale
-    : "en";
+  const currentLocale: Locale =
+    locale === "ar" || locale === "ku" || locale === "en" ? locale : "en";
 
   const room = roomsContent.rooms.find((item) => item.slug === slug);
 
@@ -29,7 +28,10 @@ export default async function RoomDetailsPage({ params }: Props) {
   const dir = page.dir[currentLocale];
 
   return (
-    <main dir={dir} className="min-h-screen bg-[#f6f1e8] px-5 py-16 text-[#18130c]">
+    <main
+      dir={dir}
+      className="min-h-screen bg-[#f6f1e8] px-5 py-16 text-[#18130c]"
+    >
       <div className="mx-auto max-w-7xl">
         <Link
           href={`/${currentLocale}/rooms`}
@@ -67,29 +69,26 @@ export default async function RoomDetailsPage({ params }: Props) {
               </div>
             </div>
 
-           <div className="mt-8 space-y-3">
+            <div className="mt-8 space-y-3">
+              {room.tour && (
+                <a
+                  href={room.tour}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex w-full items-center justify-center gap-2 rounded-full border border-[#caa46a] px-6 py-4 text-sm font-semibold text-[#18130c] transition hover:bg-black hover:text-white"
+                >
+                  🎥 {page.tourBtn[currentLocale]}
+                </a>
+              )}
 
-  {/* 🔥 Virtual Tour */}
-  {room.tour && (
-    <a
-      href={room.tour}
-      target="_blank"
-      className="flex w-full items-center justify-center gap-2 rounded-full border border-[#caa46a] px-6 py-4 text-sm font-semibold text-[#18130c] transition hover:bg-black hover:text-white"
-    >
-      🎥 {page.tourBtn[currentLocale]}
-    </a>
-  )}
-
-  {/* 🔥 Booking */}
-  <Link
-    href={`/${currentLocale}/booking`}
-    className="flex w-full items-center justify-center gap-2 rounded-full bg-[#caa46a] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[#b88e52]"
-  >
-    <CalendarDays size={18} />
-    {page.booking[currentLocale]}
-  </Link>
-
-</div>
+              <Link
+                href={`/${currentLocale}/booking`}
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-[#caa46a] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[#b88e52]"
+              >
+                <CalendarDays size={18} />
+                {page.booking[currentLocale]}
+              </Link>
+            </div>
           </aside>
         </section>
       </div>
