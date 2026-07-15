@@ -20,10 +20,12 @@ export default function RoomsPreviewSection({ locale }: Props) {
 
   // 🔥 هنا الصور الثابتة
   const images = [
-  "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1000/v1/room2-1.jpj_c1zwmh",
-  "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1000/v1/room_2_mnuwkp",
-  "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1000/v1/room2-3_haow39",
-];
+    "/images/rooms/room-01.png",
+    "/images/rooms/room-02.png",
+    "/images/rooms/room-03.png",
+    "/images/rooms/room-04.png",
+    "/images/rooms/room-05.png",
+  ];
 
   return (
     <section dir={dir} className="bg-[#f6f2eb] py-20 md:py-24">
@@ -36,7 +38,7 @@ export default function RoomsPreviewSection({ locale }: Props) {
           transition={{ duration: 0.55 }}
           className="mx-auto mb-10 max-w-[920px] text-center md:mb-14"
         >
-          <span className="mb-3 inline-block text-[11px] font-semibold uppercase tracking-[0.28em] text-[#c79a5c] md:text-xs">
+          <span className="mb-3 inline-block text-[11px] font-semibold uppercase tracking-[0.28em] text-[#123B6D] md:text-xs">
             {t.eyebrow[currentLocale]}
           </span>
 
@@ -63,7 +65,7 @@ export default function RoomsPreviewSection({ locale }: Props) {
               {/* 🔥 الصورة */}
               <div className="relative h-[248px] overflow-hidden">
                 <img
-                  src={images[index]}   // 👈 هنا التعديل
+                  src={images[index % images.length]}
                   alt={item.title[currentLocale]}
                   className="h-full w-full object-cover transition duration-500 hover:scale-[1.03]"
                 />
@@ -73,11 +75,11 @@ export default function RoomsPreviewSection({ locale }: Props) {
                 <div className="flex items-start justify-between gap-4">
                   
                   <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#c79a5c]">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#123B6D]">
                       {t.priceLabel[currentLocale]}
                     </p>
 
-                    <p className="mt-2 text-2xl font-semibold text-[#c79a5c]">
+                    <p className="mt-2 text-2xl font-semibold text-[#123B6D]">
                       {item.price}
                     </p>
                   </div>
@@ -118,7 +120,7 @@ export default function RoomsPreviewSection({ locale }: Props) {
         <div className="mt-10 flex justify-center">
           <Link
             href={`/${currentLocale}/rooms`}
-            className="inline-flex items-center gap-2 rounded-full bg-[#c79a5c] px-7 py-3.5 text-sm font-medium text-white transition hover:bg-[#b88a4f]"
+            className="inline-flex items-center gap-2 rounded-full bg-[#123B6D] px-7 py-3.5 text-sm font-medium text-white transition hover:bg-[#0B2747]"
           >
             {t.cta[currentLocale]}
             <ArrowIcon className="h-4 w-4" />

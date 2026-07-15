@@ -4,7 +4,7 @@ export const diningFacilitiesContent = {
   page: {
     dir: { ar: "rtl", en: "ltr", ku: "rtl" },
 
-    heroImage: "/facilitie.jpg",
+    heroImage: "/gallery-03.png",
 
     heroTitle: {
       ar: "المطاعم والمرافق",

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -9,14 +10,14 @@ type Props = {
 const content = {
   en: {
     dir: "ltr",
-    label: "Coral Palace Experience",
+    label: "Crixus Sarsing Experience",
     title: "A stay designed with clarity, comfort, and quiet elegance",
     desc: "Discover a refined hospitality journey where every detail is thoughtfully considered to create a seamless and memorable stay.",
     btn: "Explore Rooms",
   },
   ar: {
     dir: "rtl",
-    label: "تجربة كورال بالاس",
+    label: "تجربة كريكسوس سرسنك",
     title: "إقامة مصممة بعناية، تجمع بين الراحة والأناقة",
     desc: "اكتشف تجربة ضيافة متكاملة حيث يتم الاهتمام بكل تفصيل لتوفير إقامة سلسة ومميزة.",
     btn: "استكشف الغرف",
@@ -45,7 +46,7 @@ export default function FinalCTASection({ locale }: Props) {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#c79a5c]">
+          <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#123B6D]">
             {t.label}
           </span>
 
@@ -58,12 +59,12 @@ export default function FinalCTASection({ locale }: Props) {
           </p>
 
           <div className="mt-10">
-            <a
-              href="/rooms"
-              className="inline-flex items-center justify-center rounded-full bg-[#c79a5c] px-8 py-4 text-sm font-medium text-black transition hover:bg-[#b88a4f] md:text-base"
+            <Link
+              href={`/${locale}/rooms`}
+              className="inline-flex items-center justify-center rounded-full bg-[#123B6D] px-8 py-4 text-sm font-medium text-white transition hover:bg-[#0B2747] md:text-base"
             >
               {t.btn}
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

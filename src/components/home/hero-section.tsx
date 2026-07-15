@@ -67,7 +67,7 @@ export default function HeroSection({ locale }: Props) {
             >
               <Link
                 href={`/${currentLocale}/rooms`}
-                className="inline-flex items-center justify-center rounded-full bg-[#c79a5c] px-7 py-3.5 text-sm font-medium text-white transition hover:bg-[#b88a4f] md:px-8 md:py-4 md:text-base"
+                className="inline-flex items-center justify-center rounded-full bg-[#123B6D] px-7 py-3.5 text-sm font-medium text-white transition hover:bg-[#0B2747] md:px-8 md:py-4 md:text-base"
               >
                 {cta}
               </Link>

@@ -13,9 +13,9 @@ export const bookingContent = {
     },
 
     heroText: {
-      ar: "املأ النموذج أدناه وسيتواصل معك فريقنا لتأكيد الحجز.",
-      en: "Fill the form below and our team will contact you to confirm your booking.",
-      ku: "فۆرمەکە پڕ بکەوە و تیمەکەمان پەیوەندیت پێوە دەکات.",
+      ar: "املأ النموذج أدناه وسيتواصل معك فريق الفندق بعد تحديث معلومات الحجز الرسمية.",
+      en: "Fill the form below and the hotel team will follow up once official booking contact details are updated.",
+      ku: "فۆرمەکە پڕبکەوە و تیمی هۆتێل پەیوەندیت پێوە دەکات کاتێک زانیاری حجز نوێکرایەوە.",
     },
 
     formTitle: {
@@ -33,12 +33,12 @@ export const bookingContent = {
       phone: {
         ar: "رقم الهاتف",
         en: "Phone Number",
-        ku: "ژمارەی مۆبایل",
+        ku: "ژمارەی تەلەفۆن",
       },
       email: {
         ar: "البريد الإلكتروني",
         en: "Email",
-        ku: "ئیمەیڵ",
+        ku: "ئیمەیل",
       },
       checkin: {
         ar: "تاريخ الوصول",
@@ -66,6 +66,12 @@ export const bookingContent = {
       ar: "إرسال الحجز",
       en: "Send Booking",
       ku: "ناردنی حجز",
+    },
+
+    pendingContact: {
+      ar: "معلومات التواصل والحجز الرسمية لفندق كريكسوس سرسنك قيد التحديث حالياً.",
+      en: "Official Crixus Sarsing Hotel booking contact details are being updated.",
+      ku: "زانیاری فەرمی پەیوەندی و حجز بۆ هۆتێلی کریکسۆس سەرسنگ لە ئێستادا نوێ دەکرێتەوە.",
     },
   },
 };

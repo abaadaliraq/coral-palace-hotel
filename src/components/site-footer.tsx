@@ -12,7 +12,7 @@ type Locale = "ar" | "en" | "ku";
 const content = {
   en: {
     dir: "ltr",
-    title: "Coral Palace Hotel",
+    title: "Crixus Sarsing Hotel",
     desc: "A refined hospitality experience designed for comfort and elegance.",
     roomsTitle: "Rooms & Services",
     legalTitle: "Legal",
@@ -23,12 +23,12 @@ const content = {
     terms: "Terms & Conditions",
     privacy: "Privacy Policy",
     explore: "Explore Rooms",
-    location: "Baghdad, Iraq",
+    location: "Sarsing, Duhok, Kurdistan Region, Iraq",
     rights: "All rights reserved.",
   },
   ar: {
     dir: "rtl",
-    title: "فندق كورال بالاس",
+    title: "فندق كريكسوس سرسنك",
     desc: "تجربة ضيافة راقية مصممة للراحة والأناقة.",
     roomsTitle: "الغرف والخدمات",
     legalTitle: "روابط قانونية",
@@ -39,12 +39,12 @@ const content = {
     terms: "الشروط والأحكام",
     privacy: "سياسة الخصوصية",
     explore: "استكشف الغرف",
-    location: "بغداد، العراق",
+    location: "سرسنك، دهوك، إقليم كردستان العراق",
     rights: "جميع الحقوق محفوظة.",
   },
   ku: {
     dir: "rtl",
-    title: "Coral Palace Hotel",
+    title: "Crixus Sarsing Hotel",
     desc: "ئەزموونێکی میوانداریی تایبەتی بۆ ئاسوودەیی و جوانی.",
     roomsTitle: "ژوور و خزمەتگوزارییەکان",
     legalTitle: "بەستەرە یاساییەکان",
@@ -55,7 +55,7 @@ const content = {
     terms: "مەرج و ڕێنماییەکان",
     privacy: "سیاسەتی تایبەتمەندی",
     explore: "ژوورەکان ببینە",
-    location: "بەغدا، عێراق",
+    location: "سەرسنگ، دهۆک، هەرێمی کوردستانی عێراق",
     rights: "هەموو مافەکان پارێزراون.",
   },
 } as const;
@@ -95,21 +95,21 @@ export default function SiteFooter({ locale }: Props) {
   ];
 
   const iconClass =
-    "inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.07] text-white transition hover:-translate-y-1 hover:bg-[#c79a5c] hover:text-black";
+    "inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.07] text-white transition hover:-translate-y-1 hover:bg-[#123B6D] hover:text-white";
 
   return (
     <footer dir={t.dir} className="relative overflow-hidden bg-black text-white">
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
         <h2 className="select-none font-serif text-[76px] font-semibold tracking-[0.03em] text-white/[0.04] md:text-[150px] lg:text-[190px]">
-          Coral Palace
+          Crixus Sarsing
         </h2>
       </div>
 
       <div className="relative z-10 mx-auto w-[min(1200px,calc(100%-24px))] px-4 py-16 md:px-6 md:py-20">
         <div className="grid gap-10 md:grid-cols-[1.1fr_0.75fr_0.75fr_0.9fr]">
           <div>
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#c79a5c]">
-              Coral Palace Hotel
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#123B6D]">
+              Crixus Sarsing Hotel
             </p>
 
             <h3 className="text-2xl font-semibold">{t.title}</h3>
@@ -120,7 +120,7 @@ export default function SiteFooter({ locale }: Props) {
 
             <Link
               href={`/${currentLocale}/rooms`}
-              className="mt-6 inline-flex rounded-full bg-[#c79a5c] px-6 py-3 text-sm font-semibold text-black transition hover:bg-[#d8af75]"
+              className="mt-6 inline-flex rounded-full bg-[#123B6D] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#24598C]"
             >
               {t.explore}
             </Link>
@@ -136,7 +136,7 @@ export default function SiteFooter({ locale }: Props) {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 transition hover:text-[#c79a5c]"
+                    className="text-sm text-white/60 transition hover:text-[#123B6D]"
                   >
                     {link.label}
                   </Link>
@@ -155,7 +155,7 @@ export default function SiteFooter({ locale }: Props) {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 transition hover:text-[#c79a5c]"
+                    className="text-sm text-white/60 transition hover:text-[#123B6D]"
                   >
                     {link.label}
                   </Link>
@@ -165,27 +165,27 @@ export default function SiteFooter({ locale }: Props) {
           </div>
 
           <div className="flex flex-wrap gap-3 md:justify-end">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className={iconClass} aria-label="Facebook">
+            <span className={iconClass} aria-label="Facebook pending" title="Pending Crixus Information">
               <FacebookIcon />
-            </a>
+            </span>
 
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className={iconClass} aria-label="Instagram">
+            <span className={iconClass} aria-label="Instagram pending" title="Pending Crixus Information">
               <InstagramIcon />
-            </a>
+            </span>
 
-            <a href="tel:+9647700000000" className={iconClass} aria-label="Phone">
+            <span className={iconClass} aria-label="Phone pending" title="Pending Crixus Information">
               <Phone size={18} />
-            </a>
+            </span>
 
-            <a href="https://wa.me/9647700000000" target="_blank" rel="noreferrer" className={iconClass} aria-label="WhatsApp">
+            <span className={iconClass} aria-label="WhatsApp pending" title="Pending Crixus Information">
               <MessageCircle size={18} />
-            </a>
+            </span>
 
-            <a href="mailto:info@coralpalace.com" className={iconClass} aria-label="Email">
+            <span className={iconClass} aria-label="Email pending" title="Pending Crixus Information">
               <Mail size={18} />
-            </a>
+            </span>
 
-            <a href="https://maps.google.com/?q=Baghdad" target="_blank" rel="noreferrer" className={iconClass} aria-label="Location">
+            <a href="https://maps.google.com/?q=Sarsing" target="_blank" rel="noreferrer" className={iconClass} aria-label="Location">
               <MapPin size={18} />
             </a>
           </div>
@@ -194,7 +194,7 @@ export default function SiteFooter({ locale }: Props) {
         <div className="mt-12 border-t border-white/10 pt-5">
           <div className="flex flex-col gap-3 text-xs text-white/45 md:flex-row md:items-center md:justify-between">
             <span>
-              © {new Date().getFullYear()} Coral Palace Hotel. {t.rights}
+              © {new Date().getFullYear()} Crixus Sarsing Hotel. {t.rights}
             </span>
 
             <span>{t.location}</span>

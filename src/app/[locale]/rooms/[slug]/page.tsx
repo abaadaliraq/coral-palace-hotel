@@ -47,7 +47,7 @@ export default async function RoomDetailsPage({ params }: Props) {
             alt={room.title[currentLocale]}
           />
 
-          <aside className="rounded-[36px] bg-white p-7 shadow-[0_20px_70px_rgba(90,64,28,0.10)] md:p-9">
+          <aside className="rounded-[36px] bg-white p-7 shadow-[0_20px_70px_rgba(18,59,109,0.10)] md:p-9">
             <h1 className="text-4xl font-light tracking-tight md:text-6xl">
               {room.title[currentLocale]}
             </h1>
@@ -75,7 +75,7 @@ export default async function RoomDetailsPage({ params }: Props) {
                   href={room.tour}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex w-full items-center justify-center gap-2 rounded-full border border-[#caa46a] px-6 py-4 text-sm font-semibold text-[#18130c] transition hover:bg-black hover:text-white"
+                  className="flex w-full items-center justify-center gap-2 rounded-full border border-[#123B6D] px-6 py-4 text-sm font-semibold text-[#18130c] transition hover:bg-black hover:text-white"
                 >
                   🎥 {page.tourBtn[currentLocale]}
                 </a>
@@ -83,7 +83,7 @@ export default async function RoomDetailsPage({ params }: Props) {
 
               <Link
                 href={`/${currentLocale}/booking`}
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-[#caa46a] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[#b88e52]"
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-[#123B6D] px-6 py-4 text-sm font-semibold text-white transition hover:bg-[#0B2747]"
               >
                 <CalendarDays size={18} />
                 {page.booking[currentLocale]}

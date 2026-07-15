@@ -20,9 +20,9 @@ const content = {
   },
 
   text: {
-    ar: "نحن في فندق كورال بالاس نحترم خصوصية زوارنا ونلتزم بحماية المعلومات التي يتم تقديمها من خلال نماذج التواصل أو الحجز. تُستخدم البيانات فقط لغرض الرد على الاستفسارات أو تأكيد طلبات الحجز ولا يتم بيعها أو مشاركتها مع أي جهة خارجية.",
-    en: "At Coral Palace Hotel, we respect the privacy of our visitors and are committed to protecting information submitted through contact or booking forms. The information is used only to respond to inquiries or confirm booking requests and is not sold or shared with any third party.",
-    ku: "لە هۆتێلی Coral Palace دا ڕێز لە تایبەتمەندی سەردانکەران دەگرین و پابەندین بە پاراستنی ئەو زانیاریانەی لە ڕێگەی فۆرمی پەیوەندی یان حجز نێردراون.",
+    ar: "نحن في فندق كريكسوس سرسنك نحترم خصوصية زوارنا ونلتزم بحماية المعلومات التي يتم تقديمها من خلال نماذج التواصل أو الحجز. تُستخدم البيانات فقط لغرض الرد على الاستفسارات أو تأكيد طلبات الحجز ولا يتم بيعها أو مشاركتها مع أي جهة خارجية.",
+    en: "At Crixus Sarsing Hotel, we respect the privacy of our visitors and are committed to protecting information submitted through contact or booking forms. The information is used only to respond to inquiries or confirm booking requests and is not sold or shared with any third party.",
+    ku: "لە هۆتێلی Crixus Sarsing دا ڕێز لە تایبەتمەندی سەردانکەران دەگرین و پابەندین بە پاراستنی ئەو زانیاریانەی لە ڕێگەی فۆرمی پەیوەندی یان حجز نێردراون.",
   },
 };
 

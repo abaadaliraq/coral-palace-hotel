@@ -95,20 +95,19 @@ export default function SiteHeader({ locale }: Props) {
               href={`/${currentLocale}`}
               className="flex min-w-0 items-center gap-3"
             >
-              <div className="h-11 w-11 shrink-0 overflow-hidden rounded-full border border-white/30 bg-white/90">
-                <img
-                  src="/logo.png"
-                  alt="Coral Palace"
-                  className="h-full w-full object-cover"
-                />
+              <div
+                aria-label="Crixus Sarsing Hotel"
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/30 bg-white/90 text-sm font-semibold tracking-[0.08em] text-[#123B6D]"
+              >
+                CS
               </div>
 
               <div className="min-w-0">
-                <p className="truncate text-[11px] font-semibold uppercase tracking-[0.24em] text-[#d5a760]">
-                
+                <p className="truncate text-[11px] font-semibold uppercase tracking-[0.24em] text-[#DCE9F5]">
+                  Crixus Sarsing
                 </p>
                 <p className="truncate text-sm font-semibold text-white">
-                 
+                  Hotel
                 </p>
               </div>
             </Link>

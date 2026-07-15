@@ -40,7 +40,7 @@ export default function StatsSection({ stats = [] }: { stats?: Stat[] }) {
             transition={{ delay: i * 0.2, duration: 0.6 }}
             className="flex flex-col items-center justify-center"
           >
-            <div className="mb-3 text-[#c79a5c]">
+            <div className="mb-3 text-[#123B6D]">
               {item.icon}
             </div>
 

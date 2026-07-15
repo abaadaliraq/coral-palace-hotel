@@ -7,11 +7,7 @@ type Props = {
   locale: string;
 };
 
-const imageMap = { 
-  ar: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/why-us_bzj9n7",
-  en: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/why-us_bzj9n7",
-  ku: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/why-us_bzj9n7",
-} as const;
+const whyImage = "/images/facilities/facility-04.png";
 
 export default function WhySection({ locale }: Props) {
   const currentLocale: Locale =
@@ -24,8 +20,8 @@ export default function WhySection({ locale }: Props) {
     <section dir={dir} className="relative w-full overflow-hidden">
       <div className="relative h-[60vh] md:h-[70vh] lg:h-[80vh]">
         <img
-          src={imageMap[currentLocale]}
-          alt="Why Coral Palace"
+          src={whyImage}
+          alt="Why Crixus Sarsing"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -41,7 +37,7 @@ export default function WhySection({ locale }: Props) {
           transition={{ duration: 0.7 }}
           className="pointer-events-auto w-[92%] max-w-[560px] rounded-[999px] bg-[#fbf7f1]/95 px-6 py-8 text-center shadow-[0_30px_80px_rgba(0,0,0,0.15)] backdrop-blur md:px-10 md:py-10"
         >
-          <span className="mb-3 inline-block text-[11px] font-semibold uppercase tracking-[0.28em] text-[#c79a5c] md:text-xs">
+          <span className="mb-3 inline-block text-[11px] font-semibold uppercase tracking-[0.28em] text-[#123B6D] md:text-xs">
             {t.eyebrow[currentLocale]}
           </span>
 

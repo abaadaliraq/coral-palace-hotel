@@ -7,11 +7,7 @@ type Props = {
   locale: string;
 };
 
-const imageMap = {
-  ar: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/signature-section_ddw8ca",
-  en: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/signature-section_ddw8ca",
-  ku: "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/signature-section_ddw8ca",
-} as const;
+const signatureImage = "/images/facilities/facility-02.png";
 
 export default function SignatureSection({ locale }: Props) {
   const currentLocale = (["ar", "en", "ku"].includes(locale) ? locale : "en") as Locale;
@@ -30,7 +26,7 @@ export default function SignatureSection({ locale }: Props) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5 }}
-          className="mb-4 inline-block text-[11px] font-semibold uppercase tracking-[0.28em] text-[#c79a5c] md:text-xs"
+          className="mb-4 inline-block text-[11px] font-semibold uppercase tracking-[0.28em] text-[#123B6D] md:text-xs"
         >
           {eyebrow}
         </motion.span>
@@ -66,8 +62,8 @@ export default function SignatureSection({ locale }: Props) {
         <div className="overflow-hidden rounded-[28px] border border-black/8 bg-white shadow-[0_18px_50px_rgba(0,0,0,0.06)] md:rounded-[34px]">
           <div className="relative h-[280px] md:h-[420px] lg:h-[520px]">
             <img
-              src={imageMap[currentLocale]}
-              alt="Coral Palace Signature"
+              src={signatureImage}
+              alt="Crixus Sarsing Signature"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/22 via-black/8 to-transparent" />

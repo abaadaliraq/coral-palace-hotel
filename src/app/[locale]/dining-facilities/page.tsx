@@ -36,55 +36,34 @@ export default async function DiningFacilitiesPage({ params }: Props) {
   ];
 const gallery = [
   {
-    image:
-      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities1_eyyhtc",
-   
+    image: "/images/facilities/facility-01.png",
   },
   {
-    image:
-      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities2_w530ip",
-   
+    image: "/images/facilities/facility-02.png",
   },
   {
-    image:
-      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities7_hi46jm",
-    
+    image: "/images/facilities/facility-03.png",
   },
   {
-    image:
-      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities3_ybvq9f",
-   
+    image: "/images/facilities/facility-04.png",
   },
   {
-    image:
-      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities9_d6rywf",
-   
+    image: "/images/gallery/gallery-01.png",
   },
   {
-    image:
-      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities8_u1ru5x",
-      
-  
+    image: "/images/gallery/gallery-02.png",
   },
   {
-    image:
-      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities4_fnvdm7",
-    
+    image: "/images/gallery/gallery-03.png",
   },
   {
-    image:
-      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilitie6_x8fmwb",
-   
+    image: "/images/gallery/gallery-04.png",
   },
   {
-    image:
-      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities10_xl0xgs",
-    
+    image: "/images/gallery/gallery-05.png",
   },
   {
-    image:
-      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1400/v1/facilities5_rjhvdr",
-    
+    image: "/images/rooms/room-01.png",
   },
 ];
 
@@ -94,7 +73,7 @@ const gallery = [
     <main dir={dir} className="min-h-screen bg-[#f6f1e8] text-[#18130c]">
       <section className="relative h-[66vh] min-h-[500px] w-full overflow-hidden rounded-b-[64px]">
         <Image
-         src="https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1800/v1/facilities4_fnvdm7"
+         src="/images/gallery/gallery-03.png"
           alt=""
           fill
           priority
@@ -106,8 +85,8 @@ const gallery = [
 
         <div className="absolute inset-x-0 bottom-0 px-6 pb-14 md:px-16">
           <div className="max-w-4xl">
-            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-[#d7b77f]">
-              Coral Palace Hotel
+            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-[#DCE9F5]">
+              Crixus Sarsing Hotel
             </span>
 
             <h1 className="mt-5 text-4xl font-light leading-tight text-white md:text-7xl">
@@ -132,7 +111,7 @@ const gallery = [
           </p>
         </div>
 
-        <div className="mt-16 rounded-[34px] bg-[#8b7355] p-4 text-white md:p-6">
+        <div className="mt-16 rounded-[34px] bg-[#0B2747] p-4 text-white md:p-6">
           <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="p-5 md:p-8">
               <span className="text-xs uppercase tracking-[0.3em] text-white/60">
@@ -164,7 +143,7 @@ const gallery = [
   {t.featured.slice(1).map((item, index) => (
     <article
       key={index}
-      className="overflow-hidden rounded-[28px] bg-white shadow-[0_12px_45px_rgba(90,64,28,0.08)]"
+      className="overflow-hidden rounded-[28px] bg-white shadow-[0_12px_45px_rgba(18,59,109,0.08)]"
     >
       <div className="relative h-[240px]">
         <Image
@@ -181,7 +160,7 @@ const gallery = [
       </div>
 
       <div className="p-5 md:p-7">
-        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#efe4d2] text-[#b98a4d]">
+        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#DCE9F5] text-[#24598C]">
           {index === 0 ? (
             <HeartPulse size={16} />
           ) : (
@@ -209,9 +188,9 @@ const gallery = [
             {t.facilities.map((facility, index) => (
               <article
                 key={index}
-                className="rounded-[22px] border border-black/5 bg-white/80 p-4 shadow-[0_8px_28px_rgba(90,64,28,0.055)] transition hover:-translate-y-0.5 hover:bg-white md:p-5"
+                className="rounded-[22px] border border-black/5 bg-white/80 p-4 shadow-[0_8px_28px_rgba(18,59,109,0.055)] transition hover:-translate-y-0.5 hover:bg-white md:p-5"
               >
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#f1e6d4] text-[#b98a4d]">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#DCE9F5] text-[#24598C]">
                   {icons[index]}
                 </div>
 
@@ -244,7 +223,7 @@ const gallery = [
       {infiniteGallery.map((item, index) => (
         <div
           key={index}
-          className="relative h-[250px] w-[72vw] shrink-0 overflow-hidden rounded-[28px] bg-black shadow-[0_18px_55px_rgba(90,64,28,0.16)] sm:w-[42vw] md:h-[300px] lg:w-[18vw] xl:h-[340px]"
+          className="relative h-[250px] w-[72vw] shrink-0 overflow-hidden rounded-[28px] bg-black shadow-[0_18px_55px_rgba(18,59,109,0.16)] sm:w-[42vw] md:h-[300px] lg:w-[18vw] xl:h-[340px]"
         >
           <Image
             src={item.image}

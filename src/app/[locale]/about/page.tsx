@@ -83,7 +83,7 @@ export default async function Page({ params }: Props) {
 
         {/* 🔥 DIVIDER */}
         <div className="flex justify-center mt-20 mb-12">
-          <div className="h-[1px] w-32 bg-[#d6c3a3]" />
+          <div className="h-[1px] w-32 bg-[#DCE9F5]" />
         </div>
 
         {/* 🔥 STATS */}

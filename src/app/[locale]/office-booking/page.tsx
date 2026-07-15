@@ -63,7 +63,7 @@ export default async function OfficeBookingPage({ params }: Props) {
             </p>
           </div>
 
-          <div className="relative h-[320px] overflow-hidden rounded-[28px] shadow-[0_14px_45px_rgba(90,64,28,0.12)] md:h-[420px] md:rounded-[36px]">
+          <div className="relative h-[320px] overflow-hidden rounded-[28px] shadow-[0_14px_45px_rgba(18,59,109,0.12)] md:h-[420px] md:rounded-[36px]">
            <Image
   src="https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/office-1_akmvpy"
   alt="Office space"
@@ -83,9 +83,9 @@ export default async function OfficeBookingPage({ params }: Props) {
             {t.features.map((feature, index) => (
               <article
                 key={index}
-                className="rounded-[22px] border border-black/10 bg-white p-4 shadow-[0_10px_30px_rgba(90,64,28,0.07)] md:rounded-[28px] md:p-6"
+                className="rounded-[22px] border border-black/10 bg-white p-4 shadow-[0_10px_30px_rgba(18,59,109,0.07)] md:rounded-[28px] md:p-6"
               >
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#efe4d2] text-[#b98a4d] md:mb-5 md:h-12 md:w-12">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#DCE9F5] text-[#24598C] md:mb-5 md:h-12 md:w-12">
                   {icons[index]}
                 </div>
 

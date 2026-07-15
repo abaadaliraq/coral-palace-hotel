@@ -33,14 +33,12 @@ export const roomsContent = {
   rooms: [
     {
       slug: "royal-suite",
-      image:
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room_2_mnuwkp",
+      image: "/images/rooms/room-01.png",
       gallery: [
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto:best,w_1600/v1/room_2_mnuwkp",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room_2_ie4h86",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room_5_cpnbak",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room_mqjtlp",
-        
+        "/images/rooms/room-01.png",
+        "/images/rooms/room-02.png",
+        "/images/rooms/room-03.png",
+        "/images/rooms/room-04.png"
       ],
       price: "$399",
       tour: "https://my.matterport.com/show/?m=tC4RfesELZw",
@@ -66,13 +64,12 @@ export const roomsContent = {
 
     {
       slug: "deluxe-room",
-      image:
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room_6_ti3rs3",
-        gallery: [
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto:best,w_1600/v1/room_6_ti3rs3",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/room2-1.jpj_c1zwmh",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/room_8_z84bd0",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/room10_l8d87q",
+      image: "/images/rooms/room-02.png",
+      gallery: [
+        "/images/rooms/room-02.png",
+        "/images/rooms/room-03.png",
+        "/images/rooms/room-04.png",
+        "/images/rooms/room-05.png"
       ],
       price: "$179",
       tour: "https://my.matterport.com/show/?m=tC4RfesELZw",
@@ -98,13 +95,12 @@ export const roomsContent = {
 
     {
       slug: "executive-suite",
-      image:
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room_7_buhm5i",
+      image: "/images/rooms/room-03.png",
       gallery: [
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto:best,w_1600/v1/room_7_buhm5i",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room2-3_haow39",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room_4_z6bck0",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room2-2_nhmpqp",
+        "/images/rooms/room-03.png",
+        "/images/rooms/room-04.png",
+        "/images/rooms/room-05.png",
+        "/images/rooms/room-01.png"
       ],
       price: "$249",
       tour: "https://my.matterport.com/show/?m=tC4RfesELZw",
@@ -130,13 +126,12 @@ export const roomsContent = {
 
     {
       slug: "family-suite",
-      image:
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room2-1.jpj_c1zwmh",
+      image: "/images/rooms/room-04.png",
       gallery: [
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto:best,w_1600/v1/room_6_ti3rs3",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/room2-1.jpj_c1zwmh",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/room_8_z84bd0",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/room10_l8d87q",
+        "/images/rooms/room-04.png",
+        "/images/rooms/room-05.png",
+        "/images/rooms/room-01.png",
+        "/images/rooms/room-02.png"
       ],
       price: "$299",
       tour: "https://my.matterport.com/show/?m=tC4RfesELZw",
@@ -161,14 +156,13 @@ export const roomsContent = {
     },
     {
   slug: "premium-room",
-  image:
-    "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room_8_z84bd0",
-  gallery: [
-     "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto:best,w_1600/v1/room_8_z84bd0",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/room2-1.jpj_c1zwmh",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/room_8_z84bd0",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/room10_l8d87q",
-  ],
+  image: "/images/rooms/room-05.png",
+      gallery: [
+        "/images/rooms/room-05.png",
+        "/images/rooms/room-01.png",
+        "/images/rooms/room-02.png",
+        "/images/rooms/room-03.png"
+      ],
   price: "$199",
   tour: "https://my.matterport.com/show/?m=tC4RfesELZw",
 
@@ -193,14 +187,13 @@ export const roomsContent = {
 
 {
   slug: "junior-suite",
-  image:
-    "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room2-3_haow39",
-  gallery: [
-   "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto:best,w_1600/v1/room_7_buhm5i",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room2-3_haow39",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room_4_z6bck0",
-        "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1200/v1/room2-2_nhmpqp",
-  ],
+  image: "/images/rooms/room-01.png",
+      gallery: [
+        "/images/rooms/room-01.png",
+        "/images/rooms/room-02.png",
+        "/images/rooms/room-03.png",
+        "/images/rooms/room-04.png"
+      ],
   price: "$229",
   tour: "https://my.matterport.com/show/?m=tC4RfesELZw",
 

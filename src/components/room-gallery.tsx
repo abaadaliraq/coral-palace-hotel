@@ -32,7 +32,7 @@ export default function RoomGallery({ images, alt }: Props) {
             onClick={() => setActiveImage(image)}
             className={`relative h-20 overflow-hidden rounded-[20px] border transition md:h-28 ${
               activeImage === image
-                ? "border-[#caa46a] opacity-100"
+                ? "border-[#123B6D] opacity-100"
                 : "border-transparent opacity-60 hover:opacity-100"
             }`}
           >

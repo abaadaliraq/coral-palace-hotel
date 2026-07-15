@@ -31,38 +31,13 @@ export default function OfficeBookingForm({ locale }: Props) {
 
   function sendToWhatsApp(e: React.FormEvent) {
     e.preventDefault();
-
-    const hotelWhatsApp = "9647700000000";
-
-    const message = `
-Office Booking Request
-
-Full Name: ${form.name}
-Company Name: ${form.company}
-Email: ${form.email}
-Phone: ${form.phone}
-
-Preferred Rental Start Date: ${form.startDate}
-Booking / Rental Duration: ${form.duration}
-
-Business / Office Activity: ${form.businessType}
-Expected Number of Employees: ${form.employees}
-Required Space: ${form.space}
-
-Guests / Clients Reception: ${form.guests}
-
-Additional Notes:
-${form.notes}
-`;
-
-    const url = `https://wa.me/${hotelWhatsApp}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
+    alert(t.pendingContact[locale]);
   }
 
   return (
     <form
       onSubmit={sendToWhatsApp}
-      className="rounded-[34px] bg-white p-5 shadow-[0_20px_70px_rgba(90,64,28,0.10)] md:p-7"
+      className="rounded-[34px] bg-white p-5 shadow-[0_20px_70px_rgba(18,59,109,0.10)] md:p-7"
     >
       <div className="grid grid-cols-1 gap-x-4 gap-y-5 md:grid-cols-3">
         <Field label={t.name[locale]}>
@@ -169,7 +144,7 @@ ${form.notes}
 
         <button
           type="submit"
-          className="self-end rounded-full bg-[#c79a5c] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#b88a4f]"
+          className="self-end rounded-full bg-[#123B6D] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#0B2747]"
         >
           {t.submit[locale]}
         </button>
@@ -196,7 +171,7 @@ function Field({
 }
 
 const inputClass =
-  "h-11 w-full rounded-full border border-black/10 bg-[#f8f2e8] px-4 text-sm text-[#18130c] outline-none transition focus:border-[#c79a5c]";
+  "h-11 w-full rounded-full border border-black/10 bg-[#f8f2e8] px-4 text-sm text-[#18130c] outline-none transition focus:border-[#123B6D]";
 
 const textareaClass =
-  "w-full resize-none rounded-[22px] border border-black/10 bg-[#f8f2e8] px-4 py-3 text-sm text-[#18130c] outline-none transition focus:border-[#c79a5c]";
+  "w-full resize-none rounded-[22px] border border-black/10 bg-[#f8f2e8] px-4 py-3 text-sm text-[#18130c] outline-none transition focus:border-[#123B6D]";

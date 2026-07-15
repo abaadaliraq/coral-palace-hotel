@@ -12,19 +12,19 @@ type Locale = "ar" | "en" | "ku";
 const content = {
   en: {
     dir: "ltr",
-    eyebrow: "Coral Palace Hotel",
+    eyebrow: "Crixus Sarsing Hotel",
     title: "Plan your next stay with comfort and elegance.",
     cta: "Book Now",
   },
   ar: {
     dir: "rtl",
-    eyebrow: "فندق كورال بالاس",
+    eyebrow: "فندق كريكسوس سرسنك",
     title: "خطط لإقامتك القادمة براحة وأناقة.",
     cta: "احجز الآن",
   },
   ku: {
     dir: "rtl",
-    eyebrow: "Coral Palace Hotel",
+    eyebrow: "Crixus Sarsing Hotel",
     title: "مانەوەی داهاتووت بە ئاسوودەیی و جوانی پلان بکە.",
     cta: "حجز بکە",
   },
@@ -46,7 +46,7 @@ export default function PreFooterBanner({ locale }: Props) {
       <div className="relative h-[240px] md:h-[300px] w-full">
         <img
           src={bannerImage}
-          alt="Coral Palace Banner"
+          alt="Crixus Sarsing Banner"
           className="h-full w-full object-cover"
         />
 
@@ -58,7 +58,7 @@ export default function PreFooterBanner({ locale }: Props) {
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-[min(1200px,calc(100%-24px))] pb-10 md:pb-14">
             
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#c79a5c] md:text-xs">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#123B6D] md:text-xs">
               {t.eyebrow}
             </p>
 
@@ -69,7 +69,7 @@ export default function PreFooterBanner({ locale }: Props) {
 
               <Link
                 href={`/${currentLocale}/booking`}
-                className="inline-flex items-center gap-2 rounded-full bg-[#c79a5c] px-6 py-3 text-sm font-semibold text-black transition hover:bg-[#d8af75]"
+                className="inline-flex items-center gap-2 rounded-full bg-[#123B6D] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#24598C]"
               >
                 {t.cta}
                 <ArrowUpRight size={16} />

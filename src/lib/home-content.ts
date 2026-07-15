@@ -41,9 +41,9 @@ export const homeContent = {
       ku: "میواندارییەکی ئارام بە وردەکاریی جوان",
     },
     text: {
-      ar: "في قصر كورال ، كل مساحة صُممت لتمنحك إحساسًا بالهدوء، وتوازنًا بصريًا ينعكس في كل تفصيلة من تجربتك.",
-      en: "At Coral Palace, every space is designed to create a sense of calm, where thoughtful design meets a refined atmosphere.",
-      ku: "لە Coral Palace، هەر شوێنێک بۆ دروستکردنی هەستی ئارامی و ناسکی دیزاین کراوە، بە وردەکارییەکی بیرلێکراو.",
+      ar: "في كريكسوس سرسنك ، كل مساحة صُممت لتمنحك إحساسًا بالهدوء، وتوازنًا بصريًا ينعكس في كل تفصيلة من تجربتك.",
+      en: "At Crixus Sarsing, every space is designed to create a sense of calm, where thoughtful design meets a refined atmosphere.",
+      ku: "لە Crixus Sarsing، هەر شوێنێک بۆ دروستکردنی هەستی ئارامی و ناسکی دیزاین کراوە، بە وردەکارییەکی بیرلێکراو.",
     },
   },
 
@@ -250,9 +250,9 @@ why: {
   },
 
   eyebrow: {
-    ar: "لماذا كورال بالاس",
-    en: "Why Coral Palace",
-    ku: "بۆچی Coral Palace",
+    ar: "لماذا كريكسوس سرسنك",
+    en: "Why Crixus Sarsing",
+    ku: "بۆچی Crixus Sarsing",
   },
 
   title: {
@@ -262,9 +262,9 @@ why: {
   },
 
   text: {
-    ar: "في كورال بالاس، لا تقتصر التجربة على الإقامة، بل تمتد إلى كل تفصيلة مدروسة بعناية، من تصميم المساحات إلى جودة الخدمة، لنمنحك إحساسًا متوازنًا بين الراحة والأناقة.",
-    en: "At Coral Palace, the experience goes beyond the stay. Every detail is thoughtfully designed — from spatial design to service quality — creating a balanced sense of comfort and elegance.",
-    ku: "لە Coral Palace، ئەزموونەکە تەنها لە مانەوەدا کۆتایی نایەت. هەر وردەکارییەک بە وردی بیرلێکراوە، لە دیزاینی شوێنەکانەوە بۆ کوالێتی خزمەتگوزاری، بۆ دروستکردنی هاوسەنگی لە نێوان ئاسوودەیی و ناسکی.",
+    ar: "في كريكسوس سرسنك، لا تقتصر التجربة على الإقامة، بل تمتد إلى كل تفصيلة مدروسة بعناية، من تصميم المساحات إلى جودة الخدمة، لنمنحك إحساسًا متوازنًا بين الراحة والأناقة.",
+    en: "At Crixus Sarsing, the experience goes beyond the stay. Every detail is thoughtfully designed — from spatial design to service quality — creating a balanced sense of comfort and elegance.",
+    ku: "لە Crixus Sarsing، ئەزموونەکە تەنها لە مانەوەدا کۆتایی نایەت. هەر وردەکارییەک بە وردی بیرلێکراوە، لە دیزاینی شوێنەکانەوە بۆ کوالێتی خزمەتگوزاری، بۆ دروستکردنی هاوسەنگی لە نێوان ئاسوودەیی و ناسکی.",
   },
 },
 finalCta: {
@@ -295,9 +295,9 @@ preFooter: {
 },
 footer: {
   brand: {
-    ar: "كورال بالاس",
-    en: "Coral Palace",
-    ku: "Coral Palace",
+    ar: "كريكسوس سرسنك",
+    en: "Crixus Sarsing",
+    ku: "Crixus Sarsing",
   },
 
   description: {
@@ -342,8 +342,8 @@ tours: {
   },
 
   location: {
-    ar: "بغداد، العراق",
-    en: "Baghdad, Iraq",
+    ar: "سرسنك، دهوك، إقليم كردستان العراق",
+    en: "Sarsing, Duhok, Kurdistan Region, Iraq",
     ku: "بەغدا، عێراق",
   },
 

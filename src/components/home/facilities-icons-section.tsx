@@ -67,7 +67,7 @@ export default function FacilitiesIconsSection({ locale }: Props) {
           transition={{ duration: 0.55 }}
           className="mx-auto mb-12 max-w-[860px] text-center"
         >
-          <span className="mb-3 inline-block text-[11px] font-semibold uppercase tracking-[0.28em] text-[#c79a5c] md:text-xs">
+          <span className="mb-3 inline-block text-[11px] font-semibold uppercase tracking-[0.28em] text-[#123B6D] md:text-xs">
             {eyebrow}
           </span>
 
@@ -95,7 +95,7 @@ export default function FacilitiesIconsSection({ locale }: Props) {
                 transition={{ duration: 0.45, delay: index * 0.04 }}
                 className="group flex flex-col items-center text-center"
               >
-                <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full border border-[#c79a5c]/18 bg-white/90 text-[#c79a5c] shadow-[0_14px_34px_rgba(0,0,0,0.05)] transition duration-300 group-hover:-translate-y-1 group-hover:border-[#c79a5c]/35 group-hover:shadow-[0_20px_42px_rgba(0,0,0,0.08)] md:h-[84px] md:w-[84px]">
+                <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full border border-[#123B6D]/18 bg-white/90 text-[#123B6D] shadow-[0_14px_34px_rgba(0,0,0,0.05)] transition duration-300 group-hover:-translate-y-1 group-hover:border-[#123B6D]/35 group-hover:shadow-[0_20px_42px_rgba(0,0,0,0.08)] md:h-[84px] md:w-[84px]">
                   <Icon className="h-7 w-7 md:h-8 md:w-8" strokeWidth={1.8} />
                 </div>
 

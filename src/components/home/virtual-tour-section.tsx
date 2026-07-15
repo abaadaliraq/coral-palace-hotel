@@ -66,7 +66,7 @@ export default function VirtualTourSection({ locale }: Props) {
         <div className="sticky top-0 h-screen overflow-hidden">
           <div className="absolute inset-0">
            <img
-  src="https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto,w_1600/v1/virtualtour-hom_ne9vcl"
+  src="/images/gallery/gallery-05.png"
   alt="Virtual Tour"
   className="w-full h-full object-cover"
 />
@@ -78,7 +78,7 @@ export default function VirtualTourSection({ locale }: Props) {
             style={{ clipPath }}
           >
             <img
-              src="/test1.jpg"
+              src="/images/gallery/gallery-05.png"
               alt="Virtual Tour Reveal"
               className="h-full w-full object-cover object-center"
             />
@@ -96,7 +96,7 @@ export default function VirtualTourSection({ locale }: Props) {
                   isRtl ? "mr-auto text-right" : "ml-0 text-left"
                 }`}
               >
-                <span className="mb-4 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#d6ad74] backdrop-blur">
+                <span className="mb-4 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#DCE9F5] backdrop-blur">
                   {t.title[currentLocale]}
                 </span>
 
@@ -110,7 +110,7 @@ export default function VirtualTourSection({ locale }: Props) {
 
                 <Link
                   href={`/${currentLocale}/virtual-tours`}
-                  className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#c79a5c] px-6 py-3.5 text-sm font-semibold text-black transition hover:bg-[#d8af75]"
+                  className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#123B6D] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#24598C]"
                 >
                   <PlayCircle className="h-4 w-4" />
                   {t.cta[currentLocale]}

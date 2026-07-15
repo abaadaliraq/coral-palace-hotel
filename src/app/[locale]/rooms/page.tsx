@@ -74,7 +74,7 @@ export default async function Page({ params }: Props) {
                     {room.title[currentLocale]}
                   </h2>
 
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#f3eadc] text-[#a67c3b]">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#DCE9F5] text-[#24598C]">
                     <BedDouble size={18} />
                   </div>
                 </div>
@@ -94,14 +94,14 @@ export default async function Page({ params }: Props) {
                 <div className="mt-6 grid grid-cols-2 gap-3">
                   <Link
                     href={`/${currentLocale}/rooms/${room.slug}`}
-                    className="rounded-full bg-[#caa46a] py-2 text-center text-sm font-semibold text-white hover:bg-[#b88e52]"
+                    className="rounded-full bg-[#123B6D] py-2 text-center text-sm font-semibold text-white hover:bg-[#0B2747]"
                   >
                     {page.details[currentLocale]}
                   </Link>
 
                   <Link
                     href={`/${currentLocale}/booking`}
-                    className="rounded-full border border-[#caa46a] py-2 text-center text-sm font-semibold hover:bg-black hover:text-white"
+                    className="rounded-full border border-[#123B6D] py-2 text-center text-sm font-semibold hover:bg-black hover:text-white"
                   >
                     {page.booking[currentLocale]}
                   </Link>

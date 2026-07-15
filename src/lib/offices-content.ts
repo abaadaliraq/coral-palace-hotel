@@ -140,7 +140,13 @@ export const officesContent = {
 
   notes: { ar: "ملاحظات إضافية", en: "Additional Notes", ku: "تێبینی زیاتر" },
 
-  submit: { ar: "إرسال الطلب عبر واتساب", en: "Send Request via WhatsApp", ku: "ناردنی داواکاری بە واتساپ" },
+  submit: { ar: "إرسال الطلب", en: "Send Request", ku: "ناردنی داواکاری" },
+
+  pendingContact: {
+    ar: "معلومات التواصل والحجز الرسمية لفندق كريكسوس سرسنك قيد التحديث حالياً.",
+    en: "Official Crixus Sarsing Hotel office-booking contact details are being updated.",
+    ku: "زانیاری فەرمی پەیوەندی و حجز بۆ هۆتێلی کریکسۆس سەرسنگ لە ئێستادا نوێ دەکرێتەوە.",
+  },
 }
   },
 } as const;

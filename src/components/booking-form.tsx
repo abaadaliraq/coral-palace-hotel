@@ -5,8 +5,6 @@ import { bookingContent } from "@/lib/booking-content";
 
 type Locale = "ar" | "en" | "ku";
 
-const WHATSAPP_NUMBER = "9647700000000";
-
 export default function BookingForm({ locale }: { locale: Locale }) {
   const t = bookingContent.page;
   const f = t.fields;
@@ -33,26 +31,7 @@ export default function BookingForm({ locale }: { locale: Locale }) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const message = `
-Booking Request
-
-${f.name[locale]}: ${form.name}
-${f.phone[locale]}: ${form.phone}
-${f.email[locale]}: ${form.email}
-
-${f.checkin[locale]}: ${form.checkin}
-${f.checkout[locale]}: ${form.checkout}
-${f.guests[locale]}: ${form.guests}
-
-${f.notes[locale]}:
-${form.notes}
-`.trim();
-
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      message
-    )}`;
-
-    window.open(url, "_blank");
+    alert(t.pendingContact[locale]);
   };
 
   return (
@@ -143,7 +122,7 @@ ${form.notes}
 
         <button
           type="submit"
-          className="md:col-span-2 w-full rounded-full bg-[#c79a5c] py-3 text-sm font-semibold text-white transition hover:bg-[#b88a4f]"
+          className="md:col-span-2 w-full rounded-full bg-[#123B6D] py-3 text-sm font-semibold text-white transition hover:bg-[#0B2747]"
         >
           {t.submit[locale]}
         </button>

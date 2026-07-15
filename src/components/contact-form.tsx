@@ -4,17 +4,43 @@ type Props = {
   locale: string;
 };
 
-export default function ContactForm({ locale }: Props) {
-  const isAr = locale === "ar";
+const content = {
+  en: {
+    name: "Full Name",
+    email: "Email (optional)",
+    phone: "Phone Number",
+    message: "Write your request...",
+    send: "Send Request",
+    error: "Please fill name and phone",
+    pending:
+      "Official Crixus Sarsing Hotel contact details are being updated.",
+  },
+  ar: {
+    name: "الاسم الكامل",
+    email: "البريد الإلكتروني (اختياري)",
+    phone: "رقم الهاتف",
+    message: "اكتب طلبك هنا...",
+    send: "إرسال الطلب",
+    error: "يرجى ملء الاسم ورقم الهاتف",
+    pending:
+      "معلومات التواصل الرسمية لفندق كريكسوس سرسنك قيد التحديث حالياً.",
+  },
+  ku: {
+    name: "ناوی تەواو",
+    email: "ئیمەیل (ئارەزوومەندانە)",
+    phone: "ژمارەی تەلەفۆن",
+    message: "داواکارییەکەت بنووسە...",
+    send: "ناردنی داواکاری",
+    error: "تکایە ناو و ژمارەی تەلەفۆن پڕبکەوە",
+    pending:
+      "زانیاری پەیوەندی فەرمی بۆ هۆتێلی کریکسۆس سەرسنگ لە ئێستادا نوێ دەکرێتەوە.",
+  },
+} as const;
 
-  const t = {
-    name: isAr ? "الاسم الكامل" : "Full Name",
-    email: isAr ? "البريد الإلكتروني (اختياري)" : "Email (optional)",
-    phone: isAr ? "رقم الهاتف" : "Phone Number",
-    message: isAr ? "اكتب طلبك هنا..." : "Write your request...",
-    send: isAr ? "إرسال عبر واتساب" : "Send via WhatsApp",
-    error: isAr ? "يرجى ملء الاسم ورقم الهاتف" : "Please fill name and phone",
-  };
+export default function ContactForm({ locale }: Props) {
+  const currentLocale =
+    locale === "ar" || locale === "ku" || locale === "en" ? locale : "en";
+  const t = content[currentLocale];
 
   return (
     <form
@@ -27,59 +53,43 @@ export default function ContactForm({ locale }: Props) {
         const name = data.get("name")?.toString().trim();
         const phone = data.get("phone")?.toString().trim();
 
-        // ✅ validation بسيط
         if (!name || !phone) {
           alert(t.error);
           return;
         }
 
-        const message = `
-New Contact Request
-
-Name: ${name}
-Email: ${data.get("email") || "-"}
-Phone: ${phone}
-Message: ${data.get("message") || "-"}
-`;
-
-        const url = `https://wa.me/9647700000000?text=${encodeURIComponent(message)}`;
-        window.open(url, "_blank");
+        alert(t.pending);
       }}
-      className="bg-white rounded-[32px] p-6 md:p-8 shadow-[0_20px_70px_rgba(0,0,0,0.06)] space-y-4"
+      className="space-y-4 rounded-[32px] bg-white p-6 shadow-[0_20px_70px_rgba(0,0,0,0.06)] md:p-8"
     >
-      {/* Name */}
       <input
         name="name"
         placeholder={t.name}
-        className="w-full rounded-full border border-black/10 px-5 py-3 text-sm outline-none focus:border-[#c79a5c]"
+        className="w-full rounded-full border border-black/10 px-5 py-3 text-sm outline-none focus:border-[#123B6D]"
       />
 
-      {/* Email */}
       <input
         name="email"
         placeholder={t.email}
-        className="w-full rounded-full border border-black/10 px-5 py-3 text-sm outline-none focus:border-[#c79a5c]"
+        className="w-full rounded-full border border-black/10 px-5 py-3 text-sm outline-none focus:border-[#123B6D]"
       />
 
-      {/* Phone */}
       <input
         name="phone"
         placeholder={t.phone}
-        className="w-full rounded-full border border-black/10 px-5 py-3 text-sm outline-none focus:border-[#c79a5c]"
+        className="w-full rounded-full border border-black/10 px-5 py-3 text-sm outline-none focus:border-[#123B6D]"
       />
 
-      {/* Message */}
       <textarea
         name="message"
         placeholder={t.message}
         rows={4}
-        className="w-full rounded-[20px] border border-black/10 px-5 py-3 text-sm outline-none focus:border-[#c79a5c]"
+        className="w-full rounded-[20px] border border-black/10 px-5 py-3 text-sm outline-none focus:border-[#123B6D]"
       />
 
-      {/* Button */}
       <button
         type="submit"
-        className="w-full rounded-full bg-[#c79a5c] py-3 text-sm font-semibold text-white hover:bg-[#b88a4f] transition"
+        className="w-full rounded-full bg-[#123B6D] py-3 text-sm font-semibold text-white transition hover:bg-[#0B2747]"
       >
         {t.send}
       </button>

@@ -41,11 +41,11 @@ export default async function ToursPage({ params }: Props) {
 
   <div className="absolute inset-0 bg-black/50" />
 
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#c79a5c33,transparent_45%)]" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#123B6D33,transparent_45%)]" />
 
   <div className="relative z-10 px-6 py-28 text-white md:px-12 md:py-36">
     <div className="mx-auto max-w-7xl">
-      <span className="text-sm uppercase tracking-[0.35em] text-[#d7b77f]">
+      <span className="text-sm uppercase tracking-[0.35em] text-[#DCE9F5]">
         360° Tours
       </span>
 
@@ -83,7 +83,7 @@ export default async function ToursPage({ params }: Props) {
                     className="scroll-mt-28 overflow-hidden rounded-[20px] border border-black/10 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] transition hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)]"
                   >
                     <div className="border-b border-black/10 px-5 py-4">
-                      <span className="text-[10px] uppercase tracking-[0.2em] text-[#b98a4d]">
+                      <span className="text-[10px] uppercase tracking-[0.2em] text-[#24598C]">
                         Virtual Tour
                       </span>
 
@@ -107,7 +107,7 @@ export default async function ToursPage({ params }: Props) {
                     <div className="grid grid-cols-2 gap-3 px-5 py-4">
                       <a
                         href={`/${currentLocale}/booking`}
-                        className="rounded-full bg-[#c79a5c] px-4 py-2.5 text-center text-xs font-semibold text-white transition hover:bg-[#b88a4f]"
+                        className="rounded-full bg-[#123B6D] px-4 py-2.5 text-center text-xs font-semibold text-white transition hover:bg-[#0B2747]"
                       >
                         {bookNow}
                       </a>
@@ -116,7 +116,7 @@ export default async function ToursPage({ params }: Props) {
                         href={tour.src}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-full border border-[#c79a5c]/50 px-4 py-2.5 text-center text-xs font-semibold text-[#18130c] transition hover:bg-black/40 hover:text-white"
+                        className="rounded-full border border-[#123B6D]/50 px-4 py-2.5 text-center text-xs font-semibold text-[#18130c] transition hover:bg-black/40 hover:text-white"
                       >
                         {openTour}
                       </a>
