@@ -22,7 +22,7 @@ export default function RoomsPreviewSection({ locale }: Props) {
   const images = [
     "/images/rooms/room-01.png",
     "/images/rooms/room-02.png",
-    "/images/rooms/room-03.png",
+    "/images/rooms/room-06.png",
     "/images/rooms/room-04.png",
     "/images/rooms/room-05.png",
   ];

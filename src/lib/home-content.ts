@@ -129,7 +129,7 @@ export const homeContent = {
       },
       {
         slug: "deluxe-room",
-        image: "/room-3.jpg",
+        image: "/room-6.jpg",
         price: "$199",
         title: {
           ar: "غرفة ديلوكس",

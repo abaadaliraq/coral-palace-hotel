@@ -4,8 +4,7 @@ export const roomsContent = {
   page: {
     dir: { ar: "rtl", en: "ltr", ku: "rtl" },
 
-    heroImage:
-      "https://res.cloudinary.com/dyqdfbaln/image/upload/f_auto,q_auto:best,w_2400/v1/hero-room_qxttcl",
+    heroImage: "/images/rooms/room-06.png",
 
     heroTitle: {
       ar: "الغرف والأجنحة",
@@ -37,7 +36,7 @@ export const roomsContent = {
       gallery: [
         "/images/rooms/room-01.png",
         "/images/rooms/room-02.png",
-        "/images/rooms/room-03.png",
+        "/images/rooms/room-06.png",
         "/images/rooms/room-04.png"
       ],
       price: "$399",
@@ -67,7 +66,7 @@ export const roomsContent = {
       image: "/images/rooms/room-02.png",
       gallery: [
         "/images/rooms/room-02.png",
-        "/images/rooms/room-03.png",
+        "/images/rooms/room-06.png",
         "/images/rooms/room-04.png",
         "/images/rooms/room-05.png"
       ],
@@ -95,9 +94,9 @@ export const roomsContent = {
 
     {
       slug: "executive-suite",
-      image: "/images/rooms/room-03.png",
+      image: "/images/rooms/room-06.png",
       gallery: [
-        "/images/rooms/room-03.png",
+        "/images/rooms/room-06.png",
         "/images/rooms/room-04.png",
         "/images/rooms/room-05.png",
         "/images/rooms/room-01.png"
@@ -161,7 +160,7 @@ export const roomsContent = {
         "/images/rooms/room-05.png",
         "/images/rooms/room-01.png",
         "/images/rooms/room-02.png",
-        "/images/rooms/room-03.png"
+        "/images/rooms/room-06.png"
       ],
   price: "$199",
   tour: "https://my.matterport.com/show/?m=tC4RfesELZw",
@@ -191,7 +190,7 @@ export const roomsContent = {
       gallery: [
         "/images/rooms/room-01.png",
         "/images/rooms/room-02.png",
-        "/images/rooms/room-03.png",
+        "/images/rooms/room-06.png",
         "/images/rooms/room-04.png"
       ],
   price: "$229",
